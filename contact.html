@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        <script src="https://kit.fontawesome.com/74c00027a5.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <title>Contact</title>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-sm bg-secondary navbar-dark w-100" id="navcart">
+            <div class="container-fluid">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="food.html">ShopBestFood</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html">Cart</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container-main">
+            <span class="badge bg-secondary" id="contactbadge">Need any help? Feel free to ask</span>
+            <div class="contact roboto-black">
+                <label for="fullname">Full name</label>
+                <textarea class="form-control" rows="1" id="fullname" name="text"></textarea><br>
+
+                <label for="email" syle="padding: 20px;">
+                    <i class="fa-solid fa-envelope" style="position: relative; right: 10px;"></i>Email
+                </label>
+                <textarea class="form-control" rows="1" id="email" name="text"></textarea><br>
+
+                <i class="fa-solid fa-phone" style="position: relative; right: 10px;">
+                    <label for="number">Phone number</label>
+                </i>
+                <input type="tel" class="form-control" id="number" name="phone" pattern="[0-9]*" inputmode="numeric" /><br>
+
+                <label for="comment">How can we help you
+                    <i class="fa-solid fa-circle-question"></i>
+                </label>
+                <textarea class="form-control" rows="5" id="comment" name="text"></textarea><br>
+
+                <button type="button" class="btn btn-primary btn-white" id="submit">Submit</button>
+            </div>
+        </div>
+        <!-- The Modal -->
+        <div class="modal" id="myModal1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Form submitted successfully</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal">null</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        Thanks for feedback!
+                        We will get back to you soon.
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+        <script>
+            document.getElementById('number').addEventListener('input', function(e) {
+                this.value = this.value.replace(/[^0-9]/g, ''); // Remove non-numeric characters
+            });
+            document.getElementById("submit").addEventListener('click', function() {
+
+                let forms = document.querySelectorAll(".form-control");
+                let formfilled = true;
+
+                for (let i = 0; i < forms.length; i++) {
+                    if (forms[i].value.trim() === "") {
+                        formfilled = false;
+                        break;
+                    }
+                }
+
+                if (!formfilled) {
+                    document.querySelector('.modal-title').innerHTML = 'Form cannot be submitted empty';
+                    document.querySelector('.modal-body').innerHTML = 'Please fill all the fields';
+                } else {
+                    document.querySelector('.modal-title').innerHTML = 'Form submitted successfully';
+                    document.querySelector('.modal-body').innerHTML = 'Thanks for feedback! We will get back to you soon.';
+                    document.getElementById('fullname').value = '';
+                    document.getElementById('email').value = '';
+                    document.getElementById('number').value = '';
+                    document.getElementById('comment').value = '';
+                }
+
+                let myModal = new bootstrap.Modal(document.getElementById('myModal1'));
+                myModal.show();
+
+
+            });
+        </script>
+    </body>
+
+</html>

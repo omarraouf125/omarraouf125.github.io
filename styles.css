@@ -1,0 +1,236 @@
+.main {
+    background-image: url('/images/360015793.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.navigator {
+    width: 700px;
+    height: 500px;
+    opacity: 0.2;
+    border: 3px solid black;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.badge {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 25px;
+    font-size: 3rem;
+    opacity: 1;
+}
+
+.btn-group-vertical {
+    position: absolute;
+    top: 264px;
+    opacity: 0.6;
+    width: 700px;
+}
+
+.btn {
+    font-size: 3rem;
+    transition: font-weight 0.1s;
+    width: 700px;
+}
+
+.btn:hover {
+    font-weight: bold;
+}
+
+.btn-white {
+    color: black;
+}
+
+.foodmain {
+    background-image: url('/images/food.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    margin: 0;
+}
+
+.food-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    margin: 10px;
+}
+
+.food-item .image {
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 10px;
+}
+
+#Pizza .image {
+    background-image: url('/images/pizza.jpeg');
+}
+
+#Burger .image {
+    background-image: url('/images/burger.jpeg');
+}
+
+#Mahshi .image {
+    background-image: url('/images/mahshi.jpg');
+}
+
+#Molokheya .image {
+    background-image: url('/images/molokheya.jpeg');
+}
+
+.foodbtn {
+    font-size: 1.2rem;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    background-color: yellow;
+    padding: 5px;
+}
+
+.navbar#navfood {
+    position: absolute;
+    top: 0px;
+    opacity: 0.8;
+    width: 100%;
+}
+
+.container-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 1200px;
+    height: 500px;
+    background-color: lightgrey;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.roboto-black {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+textarea.form-control {
+    width: 100%;
+    resize: none;
+}
+
+.badge#contactbadge {
+    position: absolute;
+    top: 70px;
+}
+
+.btn#submit {
+    border-radius: 50px;
+    font-size: 1.5rem;
+    width: 300px;
+    position: relative;
+    right: 10px;
+}
+
+.cartmain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.OrderMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    padding: 5px;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #e5e5e5ff;
+}
+
+caption {
+    position: relative;
+    caption-side: top;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.OrderInfo,
+.Address,
+.Checkout {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 80%;
+    border: 1px solid rgb(229, 229, 229);
+    padding: 5px;
+}
+
+.AddressInfo,
+.AddressTitle {
+    padding: 5px;
+}
+
+.Checkout .btn {
+    width: 20%;
+}
+
+#clearCartbtn {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 20%;
+}
