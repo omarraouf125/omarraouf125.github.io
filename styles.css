@@ -109,11 +109,12 @@
 }
 
 .price {
-    font-weight: bold;
+    font-size: 1.2rem;
     width: 100%;
     text-align: center;
-    background-color: yellow;
+    background-color: #4A5D23;
     padding: 5px;
+    color: white;
 }
 
 .navbar#navfood {
@@ -137,7 +138,7 @@
     justify-content: center;
     width: 1200px;
     height: 500px;
-    background-color: lightgrey;
+    /* border: 3px solid rgb(229, 229, 229); */
     padding: 20px;
     box-sizing: border-box;
 }
