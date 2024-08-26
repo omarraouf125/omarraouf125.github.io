@@ -3,6 +3,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-size: 100vw 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,6 +63,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-size: 100vw 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
